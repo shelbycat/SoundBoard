@@ -1,0 +1,27 @@
+{
+  "name": "soundboard-parent-directory",
+  "version": "0.0.0",
+  "description": "Using Tone.js to make a sound board for table top roleplay games.  And other fun stuff",
+  "main": "index.js",
+  "scripts": {
+    "start": "cd soundboard && npm start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shelbycat/SoundBoard.git"
+  },
+  "keywords": [
+    "tone.js",
+    "ttrpg",
+    "soundboard",
+    "audio",
+    "drumpad"
+  ],
+  "author": "Shelby Kauth",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shelbycat/SoundBoard/issues"
+  },
+  "homepage": "https://github.com/shelbycat/SoundBoard#readme"
+}
