@@ -8,10 +8,22 @@ import { AppComponent } from './app.component';
 import { AboutComponent } from './routes/about/about.component';
 import { MixerComponent } from './routes/mixer/mixer.component';
 import { TestPageComponent } from './routes/test-page/test-page.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [AppComponent, AboutComponent, MixerComponent, TestPageComponent],
-  imports: [BrowserModule, AppRoutingModule, MaterialModule],
+  declarations: [
+    AppComponent,
+    AboutComponent,
+    MixerComponent,
+    TestPageComponent,
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MaterialModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

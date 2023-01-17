@@ -1,1 +1,33 @@
-<p>test-page works!</p>
+<div (drop)="catchUIDrop($event)" (dragover)="onDragOverPreview($event)">
+  <h2>Upload another Image</h2>
+  <div class="image-upload">
+    <input
+      type="file"
+      multiple
+      (change)="selectFiles($event)"
+      [formControl]="imageUploadControl"
+    />
+  </div>
+  <h3>Preview Images</h3>
+  <div class="image-gallery">
+    <ng-container *ngFor="let image of newImages">
+      <mat-card class="image-card" width="200" style="max-width: 200px">
+        <img mat-card-image [src]="image.source" />
+        <mat-card-content>
+          {{ image.filename }}
+        </mat-card-content>
+        <mat-card-actions>
+          <mat-icon (click)="removePreview(image)">delete</mat-icon>
+        </mat-card-actions>
+      </mat-card>
+    </ng-container>
+  </div>
+</div>
+<div>
+  <h2>Uploaded Image Gallery</h2>
+  <div class="image-gallery">
+    <ng-container *ngFor="let image of uploadedImages">
+      <img [src]="image.source" />
+    </ng-container>
+  </div>
+</div>
