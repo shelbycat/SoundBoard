@@ -11,7 +11,7 @@ import { FileService } from 'src/app/services/file.service';
 export class TestPageComponent implements OnInit {
   imageUploadControl = new FormControl();
   newImages: Data.Image[] = [];
-  // uploadedImages$: Observable<Data.Image[]> = this.fileService.;
+  uploadedImages$: Observable<Data.Image[]> = this.fileService.loadImages();
 
   constructor(private fileService: FileService) {}
 
