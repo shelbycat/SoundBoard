@@ -69,10 +69,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "soundboard:build:production"
+              "buildTarget": "soundboard:build:production"
             },
             "development": {
-              "browserTarget": "soundboard:build:development"
+              "buildTarget": "soundboard:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -80,7 +80,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "soundboard:build"
+            "buildTarget": "soundboard:build"
           }
         },
         "test": {
