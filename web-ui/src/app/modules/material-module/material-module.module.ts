@@ -40,7 +40,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     BrowserModule,
     BrowserAnimationsModule,
     MatCheckboxModule,
-    MatCheckboxModule,
+    MatChipsModule,
     MatButtonModule,
     MatInputModule,
     MatAutocompleteModule,
