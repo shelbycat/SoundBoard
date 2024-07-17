@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
+import { Observable, of } from 'rxjs';
+import { FileService } from 'src/app/services/file.service';
 
 @Component({
   selector: 'app-test-page',
@@ -9,9 +11,9 @@ import { FormControl } from '@angular/forms';
 export class TestPageComponent implements OnInit {
   imageUploadControl = new FormControl();
   newImages: Data.Image[] = [];
-  uploadedImages: Data.Image[] = [];
+  // uploadedImages$: Observable<Data.Image[]> = this.fileService.;
 
-  constructor() {}
+  constructor(private fileService: FileService) {}
 
   ngOnInit(): void {}
 
@@ -67,5 +69,9 @@ export class TestPageComponent implements OnInit {
       };
       reader.readAsDataURL(file);
     }
+  }
+
+  uploadNewImages() {
+    console.log(this.newImages);
   }
 }
